@@ -1,0 +1,57 @@
+Virtual environment installation:
+pip install virtualenv
+
+Creating a virtual environment:
+virtualenv venv_package 
+
+Activating a virtual environment:
+source venv_package/bin/activate || venv_package\Scripts\activate
+
+(venv_package) suhas@suhasVM:~/code/packages/prediction_model$
+Deactivating a virtual environment:
+deactivate
+To see the list of packages installed in the virtual environment:
+pip list
+Or
+pip freeze
+
+_____________________________________________________________________
+
+STEPS to build our code base:
+
+1. First add all the files in the directory 
+2. Populate MANIFEST.in with generic data
+
+3. Add config.py file : A configuration module contains constant variables, the path to the directories, and
+initial settings. Variables and functions can be accessed by importing this module
+into other modules. For instance, the TARGET variable holds the dependent column
+name Loan_Status.
+Here, specify the path for the package’s root directory, data directory, train file name,
+test file name, features, and path of other files and directories. | import pathllib, os
+
+4. Add data_management.py : This module contains functions required for loading the data, saving serialized ML
+model, and loading deserialized ML model using joblib | import config and joblib
+
+5. Add preprocessors.py : This module holds all the fit and transform functions required 
+by the sklearn pipeline | import config and sklearn base models
+
+6. Add pipeline.py : In this module, sklearn-pipeline is used. The model can be deployed without a
+sklearn-pipeline, but it is recommended to build a sklearn-pipeline. The purpose of
+the pipeline is to assemble several steps that can be cross-validated together while
+setting different parameters. | import config and preprocessors
+
+7. Add predict.py : A predict.py module loads the saved ML model (.pkl) and makes predictions on the
+new data.
+
+8. Add requirements.txt | use pip freeze command to fill the txt
+
+9. Add train_pipeline.py : This module loads the training data and passes it to the pipeline, then saves the
+pickle file of the model to the local directory | config, data_management, predirct, preprocesor
+
+10. Add setup.py : To configure and install packages from the source directory, create a setup.py file. It
+is specific to the package. PIP will use the setup.py file to install packages. Go to the
+directory where the setup.py file is located and install the packages using the pip
+install . (period) command. 
+
+11. Add VERSION to your package 
+
