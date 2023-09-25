@@ -62,6 +62,17 @@ To disable warnings while running pytest, you have to configure the pytest.ini f
 13. Add test_predict.py : It fetches a single record from the validation data and verifies the output using
 assert statements.
 
+14. Set the environment variable PYTHONPATH and go to the package directory, and then
+run the following command:
+pytest -v || If all green proceed forward 
+
+15. Create wheel and build/dist for package
+-> Install requirements 
+pip install -r requirements.txt
+-> Create a pickle file:
+python prediction_model/train_pipeline.py
+-> Creating a source distribution and wheel:
+python setup.py sdist bdist_wheel
 ______________________________________________________________________________
 
 
@@ -77,4 +88,11 @@ build step is not required. A wheel distribution is a built distribution for the
 platform. The installable wheel will be created under the dist directory, and a build
 directory will also be created with the built code.
 
+Build the package
+1. Go to the project directory and install dependencies:
+pip install -r requirements.txt
+2. Create a pickle file:
+python prediction_model/train_pipeline.py
+3. Creating a source distribution and wheel:
+python setup.py sdist bdist_wheel
 
