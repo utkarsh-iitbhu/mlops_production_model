@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: prediction-model
+Version: 1.0.0
+Summary: Train and deploy prediction model.
+Home-page: https://github.com/utkarsh-iitbhu/mlops_production_model
+Author: LordSahu
+Author-email: utkarsh.bhuiit@gmail.com
+License: MIT
+Description: 
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

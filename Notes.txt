@@ -53,5 +53,28 @@ is specific to the package. PIP will use the setup.py file to install packages. 
 directory where the setup.py file is located and install the packages using the pip
 install . (period) command. 
 
-11. Add VERSION to your package 
+11. Add VERSION to your package : This file holds the version of the package. Here, a major.minor.micro scheme is
+used.
+
+12. Add pytest.ini : [pytest] /n addopts = -p no:warnings
+To disable warnings while running pytest, you have to configure the pytest.ini file.
+
+13. Add test_predict.py : It fetches a single record from the validation data and verifies the output using
+assert statements.
+
+______________________________________________________________________________
+
+
+sdist
+Python’s sdists are compressed archives (.tar.gz files) containing one or more
+packages or modules.
+This creates a dist directory containing a compressed archive of the package (for
+example, <PACKAGE_NAME>-<VERSION>.tar.gz in Linux).
+wheel
+This is the binary distribution or bdist, and it supports Windows, Mac, and Linux.
+Wheels will speed up the installation if you have compiled code extensions, as the
+build step is not required. A wheel distribution is a built distribution for the current
+platform. The installable wheel will be created under the dist directory, and a build
+directory will also be created with the built code.
+
 

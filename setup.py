@@ -9,7 +9,7 @@ DESCRIPTION = 'Train and deploy prediction model.'
 URL = 'https://github.com/utkarsh-iitbhu/mlops_production_model'
 EMAIL = 'utkarsh.bhuiit@gmail.com'
 AUTHOR = 'LordSahu'
-REQUIRES_PYTHON = '3.6'
+REQUIRES_PYTHON = '>=3.8'
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -52,7 +52,9 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.8',    
+        'Programming Language :: Python :: 3.9',  
+        'Programming Language :: Python :: 3.10',  
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ]
